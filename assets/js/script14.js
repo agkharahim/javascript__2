@@ -1,11 +1,20 @@
-let userInput = prompt("Enter some text:");
+let text = prompt("Please enter a random text.");
 
-if (/\d/.test(userInput)) {
-    console.log("There is number(s) in the input");
+let hasDigit = false;
+
+for (i = 0; i < text.length; i++) {
+    if (text[i] >= "0" && text[i] <= "9" ) {
+        hasDigit = true;
+        break;
+    }
+}
+
+if (hasDigit){
+    console.log("There is a digit in that text.");
 }
 
 else {
-    console.log("There is not number(s) entered in the input");
+    console.log("There is no digit in that text");
 }
 
 
